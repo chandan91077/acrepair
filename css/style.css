@@ -1,0 +1,46 @@
+.carousel-item button {
+    padding: 17px 30px;
+    background-color: #fecd1a;
+    border: 0px;
+    margin-left: -5rem;
+    font-weight: 100;
+    font-size: 15px;
+    position: absolute;
+    color: black;
+    border-radius: 3px;
+    transition: 0.3s;  
+}
+
+.carousel-item button:hover {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    border-radius: 3px 15px;
+    transition: 0.3s;
+}
+
+.btn {
+    background-color: #fecd1a;
+}
+.btn:hover {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    border-radius: 3px 15px;
+    transition: 0.3s;
+}
+
+.contact-grid1 {
+    text-align: left;
+}
+footer {
+    background-color: #174c97;
+    color: white;
+}
+@media (min-width: 320px) and (max-width: 767px){
+    iframe {
+    margin-left: 55px;
+    margin-top: 55px;
+    }
+    .contact-grid1 {
+        text-align: center;
+    }
+}

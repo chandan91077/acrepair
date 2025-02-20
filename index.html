@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>ACREPAIR || SMK69</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="css/mdb.min.css" />
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- Pop-up Ad -->
+  <div id="popupAd" style="position: fixed; top: 25%; left: 25%; width: 50%; height: 50%; background: white; color: black; border: 2px solid #fecd1a; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); z-index: 9999; display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 20px;">
+    <span id="closeBtn" style="position: absolute; top: 10px; right: 10px; font-size: 24px; cursor: pointer;">&times;</span>
+    <h2>Quick Service Available!</h2>
+    <p>Get your AC repaired in just 30 minutes. Call now!</p>
+    <a href="tel: +917802013274"> +917802013274</a>
+    <span id="countdown">10</span>
+  </div>
+
+  <!-- Your existing scripts -->
+
+  <script>
+  // Function to close the pop-up ad
+  function closePopupAd() {
+    const popupAd = document.getElementById('popupAd');
+    popupAd.style.display = 'none'; // Hide the pop-up
+  }
+
+  // Attach the close function to the close button
+  document.getElementById('closeBtn').addEventListener('click', closePopupAd);
+
+  // Countdown timer for auto-close
+  let countdown = 10;
+  const countdownElement = document.getElementById('countdown');
+
+  const countdownInterval = setInterval(() => {
+    countdown--;
+    countdownElement.textContent = countdown;
+
+    if (countdown <= 0) {
+      clearInterval(countdownInterval); // Stop the countdown
+      closePopupAd(); // Close the pop-up
+    }
+  }, 1000); // Update every second
+</script>
+  <!--Main Navigation-->
+  <header>
+    <style>
+      /* Carousel styling */
+      #introCarousel,
+      .carousel-inner,
+      .carousel-item,
+      .carousel-item.active {
+        height: 100vh;
+      }
+
+      .carousel-item:nth-child(1) {
+        background-image: url('img/home1.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      .carousel-item:nth-child(2) {
+        background-image: url('img/home2.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      .carousel-item:nth-child(3) {
+        background-image: url('img/home3.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      /* Height for devices larger than 576px */
+      @media (min-width: 992px) {
+        #introCarousel {
+          margin-top: -58.59px;
+        }
+      }
+
+      .navbar {
+        /* color: #030303 !important;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        border-radius: 1rem;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border: 6px solid #fecd1a;
+        margin-top: -1rem;
+        padding: 10px;
+        margin-left: -5px;
+        margin-right: -5px;
+        background-color: white; */
+        margin-top: -9px;
+        overflow: hidden;
+        border-bottom: 6px solid #fecd1a;
+        background-color: white;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        position: fixed; /* Set the navbar to fixed position */
+        top: 0; /* Position the navbar at the top of the page */
+        width: 100%; /* Full width */
+      }
+      .nav-link {
+        color: #030303 !important;
+      }
+    </style>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg" style="z-index: 2000;">
+      <div class="container-fluid">
+        <!-- Navbar brand -->
+        <a class="navbar-brand nav-link" target="_blank" href="">
+          <strong>ACREPAIR</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample"
+          aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse text-center" id="navbarExample">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="#introCarousel">Home</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#service">Service</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav list-inline">
+            <!-- Icons -->
+            <li class="nav-item">
+              <a class="nav-link" href="https://script.google.com/macros/s/AKfycbyvXkOzUkNexMb1odUP9onViuzKeSOSvhcBZukGbwfeBK0IPOLDqAKYCkZmQBJVOGuPOQ/exec">
+                Login
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Carousel wrapper -->
+    <div id="introCarousel" class="carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-mdb-target="#introCarousel" data-mdb-slide-to="0" class="active"></li>
+        <li data-mdb-target="#introCarousel" data-mdb-slide-to="1"></li>
+        <li data-mdb-target="#introCarousel" data-mdb-slide-to="2"></li>
+      </ol>
+
+      <!-- Inner -->
+      <div class="carousel-inner">
+        <!-- Single item -->
+        <div class="carousel-item active">
+          <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="text-white text-center">
+                <h1 class="mb-3">WE PROVIDE</h1>
+                <h1 class="mb-4">PROFESSIONAL</h1>
+                <h1 class="mb-4">SERVICES</h1>
+                <p>Get all kinds of AC repair, service, cleaning, installation and maintenance service at your doorstep in 30 minutes. Schedule your service now!</p>
+                <a href="#contact"><button>CONTACT US</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single item -->
+        <div class="carousel-item">
+          <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="text-white text-center">
+                <h1 class="mb-3">BEST</h1>
+                <h1 class="mb-4">PROFESSIONAL</h1>
+                <h1 class="mb-4">SERVICES</h1>
+                <p>Get all kinds of AC repair, service, cleaning, installation and maintenance service at your doorstep in 30 minutes. Schedule your service now!</p>
+                <a href="#about"><button>LEARN MORE</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single item -->
+        <div class="carousel-item">
+          <div class="mask" style="
+                background: linear-gradient(
+                  45deg,
+                  rgba(29, 236, 197, 0.7),
+                  rgba(91, 14, 214, 0.7) 100%
+                );
+              ">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="text-white text-center">
+                <h1 class="mb-3">BEST</h1>
+                <h1 class="mb-4">PROFESSIONAL</h1>
+                <h1 class="mb-4">SERVICES</h1>
+                <p>Get all kinds of AC repair, service, cleaning, installation and maintenance service at your doorstep in 30 minutes. Schedule your service now!</p>
+                <a href="#service"><button>SERVICE MORE</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Inner -->
+
+      <!-- Controls -->
+      <!-- <a class="carousel-control-prev" href="#introCarousel" role="button" data-mdb-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#introCarousel" role="button" data-mdb-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a> -->
+    </div>
+    <!-- Carousel wrapper -->
+  </header>
+  <!--Main Navigation-->
+
+  <!--Main layout-->
+  <main class="mt-5">
+    <div class="container">
+      <!--Section: Content-->
+      <section id="about">
+        <div class="row">
+          <div class="col-md-6 gx-5 mb-4">
+            <div class="bg-image hover-overlay ripple shadow-2-strong" data-mdb-ripple-color="light">
+              <img src="img/about.jpg" class="img-fluid" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 gx-5 mb-4">
+            <h4><strong>AC COOL SERVICE</strong></h4>
+            <p class="text-muted">
+              ACREPAIR Service is a business that operates in the field of air conditioning and refrigerator repair services, including cleaning and installation, in the Jakarta area and its surroundings.
+            </p>
+            <p><strong>Services?</strong></p>
+            <p class="text-muted">
+              Starting from the customers' need for honest, reliable, and credible air conditioner (AC) service, we are here to meet that need, supported by experienced technicians and nationally standardized tools, allowing us to provide excellent service quality to all customers across various sectors.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    <div class="container">
+
+      <!--Section: Testimonials v.3-->
+      <section id="testimonials" class="team-section mt-2 mb-5">
+
+          <!--Secion heading-->
+          <div class="row mt-5 mb-4">
+            <div class="col-md-12">
+              <div class="divider-new">
+                <h3 class="text-center text-uppercase font-weight-bold mr-3 ml-3 wow fadeIn" data-wow-delay="0.2s">Testimonials</h3>
+              </div>
+            </div>
+            <!--/Secion heading-->
+
+            <!--Section description-->
+            <p class="text-center grey-text w-responsive mx-auto mb-5 wow fadeIn" data-wow-delay="0.2s">Hear What Our Clients Say
+            </p>
+
+            <!--First row-->
+            <div class="row text-center">
+
+              <!--First column-->
+              <div class="col-md-4 mb-4 wow fadeIn" data-wow-delay="0.4s">
+
+                <div class="testimonial">
+                  <!--Avatar-->
+                  <div class="avatar mx-auto mb-4">
+                    <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%285%29.jpg" class="rounded-circle img-fluid z-depth-1-half">
+                  </div>
+
+                  <!--Content-->
+                  <h4 class="font-weight-bold">Ambuj</h4>
+                  <p>
+                    <i class="fas fa-quote-left "></i>I am very impressed with the air conditioning services provided by this website. They are very professional and responsive in handling my AC issues. The technician they sent was also very experienced and efficient in making the repairs. I highly recommend their services to anyone in need of AC maintenance or repair.
+                  </p>
+
+                  <!--Review-->
+                  <div class="green-text">
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star-half-alt"> </i>
+                  </div>
+                </div>
+              </div>
+              <!--/First column-->
+
+              <!--Second column-->
+              <div class="col-md-4 mb-4 wow fadeIn" data-wow-delay="0.4s">
+                <div class="testimonial">
+                  <!--Avatar-->
+                  <div class="avatar mx-auto mb-4">
+                    <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%289%29.jpg" class="rounded-circle img-fluid z-depth-1-half">
+                  </div>
+
+                  <!--Content-->
+                  <h4 class="font-weight-bold">Aman</h4>
+                  <p>
+                    <i class="fas fa-quote-left"></i>I was truly amazed by the air conditioning service on this website. They responded to my request very quickly, and within a short time, a qualified technician came to my home and repaired my AC very well. I am very pleased with the results and will definitely use their services again in the future.</p>
+
+                  <!--Review-->
+                  <div class="green-text">
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                  </div>
+                </div>
+              </div>
+              <!--/Second column-->
+
+              <!--Third column-->
+              <div class="col-md-4 mb-4 wow fadeIn" data-wow-delay="0.4s">
+                <div class="testimonial">
+                  <!--Avatar-->
+                  <div class="avatar mx-auto mb-4">
+                    <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%288%29.jpg" class="rounded-circle img-fluid z-depth-1-half">
+                  </div>
+                  <!--Content-->
+                  <h4 class="font-weight-bold">Tom</h4>
+                  <p>
+                    <i class="fas fa-quote-left"></i>I am very satisfied with the air conditioning service on this website. Their customer service is excellent, and the staff is very friendly. The technician sent to my home was also very knowledgeable and clearly explained what he was working on. I will definitely recommend them to my friends and family.</p>
+
+                  <!--Review-->
+                  <div class="green-text">
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="far fa-star"> </i>
+                  </div>
+
+                </div>
+              </div>
+              <!--/Third column-->
+
+            </div>
+            <!--/First row-->
+          </div>
+
+      </section>
+      <!--/Section: Testimonials v.3-->
+
+    </div>
+      <!--Section: Content-->
+
+
+
+      <hr class="my-5" />
+
+      <!--Section: Content-->
+      <section class="text-center" id="service">
+        <h4 class="mb-5"><strong>SERVICES</strong></h4>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-12 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="img/service1.jpg" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">AC (AIR CONDITIONER)</h5>
+                <p class="card-text">
+                  Trusted and Guaranteed AC Service in Surat
+                </p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
+                  More details..
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">SERVICE AC</h5>
+                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <p>
+                        <h1 align="center"><b>Trusted and Guaranteed AC Service in Surat</b></h1>
+
+                        <p>We provide <u>call-out AC service</u> specifically for the Surat area and its surroundings at affordable prices. The AC service from King Service is guaranteed to be of high quality and comes with a warranty. We have been experienced in AC service since 2000, so we ensure that your AC will be handled by the right technician.</p>
+                          
+                        <p><br />
+                          We offer AC service for all brands, all types of AC (<em>split AC, cassette AC, standing floor AC, central AC, etc.</em>), and all sizes of AC units.</p>
+                        
+                        <h3><b><u>Our AC service includes:</u></b></h3>
+
+                        <ul>
+                          <li>SERVICE / AC CLEANING</li>
+                          <li>REFRIGERANT GAS CHARGING R22 / R32 / R410</li>
+                          <li>AC INSTALLATION / REMOVAL</li>
+                          <li>LEAK WELDING / PIPE U (BEND) REPLACEMENT</li>
+                          <li>OUTDOOR VALVE REPLACEMENT</li>
+                          <li>BEARING REPLACEMENT</li>
+                          <li>RUNNING CAPACITOR REPLACEMENT</li>
+                          <li>STARTING CAPACITOR REPLACEMENT</li>
+                          <li>COMPRESSOR REPLACEMENT</li>
+                          <li>INDOOR AC FAN MOTOR REPLACEMENT</li>
+                          <li>OUTDOOR AC FAN MOTOR REPLACEMENT</li>
+                          <li>RUNNING FAN REPLACEMENT</li>
+                          <li>FAN REPLACEMENT</li>
+                          <li>OVERLOAD REPLACEMENT</li>
+                          <li>AC SPARE PART REPLACEMENT</li>
+                          <li>PCB REPAIR</li>
+                          <li>COPPER PIPE INSTALLATION</li>
+                          <li>ELECTRICAL CABLES</li>
+                          <li>AC REMOTE</li>
+                          <li>WATER HOSE</li>
+                          <li>OUTDOOR BRACKET INSTALLATION</li>
+                          <li>DINABOLT SCREWS</li>
+                          <li>AND OTHERS</li>
+                        </ul>
+                          &nbsp;</li>
+                      </ul>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="img/service2.jpg" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Washing Machine</h5>
+                <p class="card-text">
+                  For the Surat area and its surroundings
+                </p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal2">
+                  More details..
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2"
+                  aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel2">Repair AC</h5>
+                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <p><strong>Best Washing Machine Service in Surat</strong></p>
+                          <ul>
+                              <li>Experienced and professional technicians.</li>
+                              <li>Complete technician equipment.</li>
+                              <li>Service available for all types of washing machines.</li>
+                              <li>30-day warranty for washing machine repairs, 14-day warranty for installation/removal, and 7-day warranty for cleaning.</li>
+                              <li>Warranty ONLY applies to orders made through the website or the Seekmi app.</li>
+                              <li>Free insurance available for non-cash payments.</li>
+                          </ul>
+                          <p></p>
+                          <li>We only select the most qualified technicians to ensure excellent service quality. Your satisfaction is our top priority.</li>
+                          <li>No hassle, handled by our professional and friendly customer service available 7 days a week.</li>
+                          </ul>
+                          <p></p>
+                          <p><strong>Notice</strong><br />Your order will be automatically canceled within 24 hours if our customer service cannot contact you by phone for verification and scheduling purposes.</p>
+                          <p>Please do not give permission if the technician intends to take the washing machine outside your residence for any reason.</p>
+                          <p>Please contact Seekmi Customer Service to inquire about the costs for washing machine component replacement.</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="img/service3.jpg" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Clean Refrigerator</h5>
+                <p class="card-text">
+                  Trust Us with Various Types of Refrigerator Services
+                </p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal3">
+                  MORE DETAILS..
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel3">Refrigerator Cleaning Service</h5>
+                      <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      Cleaning the refrigerator, both the interior and exterior, is necessary to keep your fridge free from dust and odors. Accumulated dust and spills can reduce the efficiency of the refrigerator and contaminate the food inside. Make sure to have your refrigerator cleaned every 3-4 months.
+              
+                      <br /><br />
+                      <strong>Our Refrigerator Services Include:</strong>
+                      <ul>
+                        <li>Thorough cleaning of the interior and exterior surfaces.</li>
+                        <li>Removal of old food and spills to prevent odors.</li>
+                        <li>Checking and cleaning the condenser coils for optimal performance.</li>
+                        <li>Inspecting door seals for proper sealing and energy efficiency.</li>
+                        <li>Disinfecting surfaces to eliminate bacteria and allergens.</li>
+                        <li>Providing tips for maintaining your refrigerator's cleanliness and efficiency.</li>
+                      </ul>
+              
+                      <br />
+                      Regular maintenance not only extends the life of your refrigerator but also ensures that your food stays fresh and safe to eat. Our experienced technicians are equipped with the right tools and cleaning agents to provide a comprehensive service tailored to your refrigerator's needs.
+                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+      <!--Section: Content-->
+
+      <hr class="my-5" />
+
+      <!--Section: Content-->
+      <!-- <section class="mb-5">
+        <h4 class="mb-5 text-center"><strong>Facilis consequatur eligendi</strong></h4>
+
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-6">
+            <form>
+              <!-- 2 column grid layout with text inputs for the first and last names 
+              <div class="row mb-4">
+                <div class="col">
+                  <div class="form-outline">
+                    <input type="text" id="form3Example1" class="form-control" />
+                    <label class="form-label" for="form3Example1">First name</label>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-outline">
+                    <input type="text" id="form3Example2" class="form-control" />
+                    <label class="form-label" for="form3Example2">Last name</label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Email input 
+              <div class="form-outline mb-4">
+                <input type="email" id="form3Example3" class="form-control" />
+                <label class="form-label" for="form3Example3">Email address</label>
+              </div>
+
+              <!-- Password input 
+              <div class="form-outline mb-4">
+                <input type="password" id="form3Example4" class="form-control" />
+                <label class="form-label" for="form3Example4">Password</label>
+              </div>
+
+              <!-- Checkbox 
+              <div class="form-check d-flex justify-content-center mb-4">
+                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" checked />
+                <label class="form-check-label" for="form2Example3">
+                  Subscribe to our newsletter
+                </label>
+              </div>
+
+              <!-- Submit button 
+              <button type="submit" class="btn btn-primary btn-block mb-4">
+                Sign up
+              </button>
+
+              <!-- Register buttons 
+              <div class="text-center">
+                <p>or sign up with:</p>
+                <button type="button" class="btn btn-primary btn-floating mx-1">
+                  <i class="fab fa-facebook-f"></i>
+                </button>
+
+                <button type="button" class="btn btn-primary btn-floating mx-1">
+                  <i class="fab fa-google"></i>
+                </button>
+
+                <button type="button" class="btn btn-primary btn-floating mx-1">
+                  <i class="fab fa-twitter"></i>
+                </button>
+
+                <button type="button" class="btn btn-primary btn-floating mx-1">
+                  <i class="fab fa-github"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section> -->
+      <!--Section: Content-->
+    </div>
+  </main>
+  <!--Main layout-->
+  <section class="text-center" id="contact">
+    <h4 class="mb-5"><strong>CONTACT</strong></h4>
+  <div class="container">
+    <div class="row">
+      <div class="col-md">
+        <div class="contact-grid1">
+          <img src="img/contact.jpg" width="300" height="210">
+          <br>
+          <span style="font-weight: bold;">Chandrasen At chandraseny205@gmail.com</span>
+        <p>New business, general and press.</p>
+        <span style="font-weight: bold;">+917802013274</span>
+        <p>Feel free to give us a call.</p>
+        <span style="font-weight: bold;">chandraseny205@gmail.com<</span>
+        <p>If you wish to join us.</p>
+        <span style="font-weight: bold;">Head Office</span>
+        <p>N 2239 Turnpike Drive, Birmingham,
+          Alabama, 35222. United States</p>
+        </div>
+        
+      </div>
+      <div class="col-md">
+        <form action="" class="contact-form" id="contact-form">
+          <!-- 2 column grid layout with text inputs for the first and last names -->
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <input type="text" id="first_name" class="form-control" />
+                <label class="form-label" for="form6Example1">First name</label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-outline">
+                <input type="text" id="last_name" class="form-control" />
+                <label class="form-label" for="form6Example2">Last name</label>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Text input -->
+          <div class="form-outline mb-4">
+            <input type="text" id="company_name" class="form-control" />
+            <label class="form-label" for="form6Example3">Problem</label>
+          </div>
+        
+          <!-- Text input -->
+          <div class="form-outline mb-4">
+            <input type="text" id="address" class="form-control" />
+            <label class="form-label" for="form6Example4">Address</label>
+          </div>
+        
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <input type="email" id="email" class="form-control" />
+            <label class="form-label" for="form6Example5">Email</label>
+          </div>
+        
+          <!-- Number input -->
+          <div class="form-outline mb-4">
+            <input type="number" id="phone" class="form-control" />
+            <label class="form-label" for="form6Example6">Phone</label>
+          </div>
+        
+          <!-- Message input -->
+          <div class="form-outline mb-4">
+            <textarea class="form-control" id="message" rows="4"></textarea>
+            <label class="form-label" for="form6Example7">Message</label>
+          </div>
+        
+          <!-- Submit button -->
+          <button type="submit"  value="Send" id="send-btn" class="btn btn-primary btn-block mb-4">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  </section>
+  
+  <!--Footer-->
+  <footer class="text-center text-lg-start">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between ">
+      <!-- Left -->
+      <!-- <div class="me-5 d-none d-lg-block">
+        <span>Get connected with us on social networks:</span>
+      </div> -->
+      <!-- Left -->
+
+      <!-- Right -->
+      <!-- <div>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-github"></i>
+        </a>
+      </div> -->
+      <!-- Right -->
+      <!-- Section: Social media -->
+
+      <!-- Section: Links  -->
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-user me-3"></i>ACREPAIR
+            </h6>
+            <p>
+              ACREPAIR is a business that operates in the field of air conditioning services, including cleaning, installation, and removal, in the Surat area and its surroundings.
+
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <div class="ratio ratio-1x1">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.432086671616!2d106.92343631471655!3d-6.206597395506961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698bcabb1368d7%3A0xea46dd080cc5e54c!2sSMKN%2069%20JAKARTA%20TIMUR!5e0!3m2!1sid!2sid!4v1661244323398!5m2!1sid!2sid"
+                frameborder="0" style="border: 0; width: 240px; height: 250px;" allowfullscreen></iframe>
+            </div>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Useful links
+            </h6>
+            <p>
+              <a href="#Home" class="text-reset">Home</a>
+            </p>
+            <p>
+              <a href="#About" class="text-reset">About</a>
+            </p>
+            <p>
+              <a href="#Sevice" class="text-reset">Service</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Shop</a>
+            </p>
+            <p>
+              <a href="#Contact" class="text-reset">Contact</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="fas fa-school me-3"></i> Surat</p>
+            <p>
+              <i class="fas fa-envelope me-3"></i>
+              chandraseny205@gmail.com
+            </p>
+            <p><i class="fas fa-phone me-3"></i><a href="tel:+917802013274" style="color: white; text-decoration: none; font-weight: bold;">+917802013274</a>
+              <p><i class="fas fa-print me-3"></i><a href="tel:+919082182881" style="color: white; text-decoration: none; font-weight: bold;">+919082182881</a>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <!-- <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2021 Copyright:
+      <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div> -->
+    <!-- Copyright -->
+  </footer>
+  <!--Footer-->
+  <!-- MDB -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript" src="js/script.js"></script>
+  <!--Start of Tawk.to Script-->
+
+<!--End of Tawk.to Script-->
+
+<!-- Email Js Link -->
+<script
+type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+></script>
+<!-- Sweet Alert Js Link -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script type="text/javascript">
+(function () {
+  emailjs.init("v7Z-JNQPTCC720Ui_"); // You will use your email js api key here
+})();
+</script>
+<script src="/js/main.js"></script>
+</body>
+
+</html>
