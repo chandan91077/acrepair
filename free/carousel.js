@@ -3,11 +3,7 @@ import EventHandler from '../mdb/dom/event-handler';
 import SelectorEngine from '../mdb/dom/selector-engine';
 import BSCarousel from '../bootstrap/mdb-prefix/carousel';
 
-/**
- * ------------------------------------------------------------------------
- * Constants
- * ------------------------------------------------------------------------
- */
+
 
 const NAME = 'carousel';
 const DATA_KEY = `mdb.${NAME}`;
@@ -69,11 +65,7 @@ class Carousel extends BSCarousel {
   }
 }
 
-/**
- * ------------------------------------------------------------------------
- * Data Api implementation - auto initialization
- * ------------------------------------------------------------------------
- */
+
 
 SelectorEngine.find(SELECTOR_DATA_RIDE).forEach((el) => {
   let instance = Carousel.getInstance(el);
@@ -82,12 +74,6 @@ SelectorEngine.find(SELECTOR_DATA_RIDE).forEach((el) => {
   }
 });
 
-/**
- * ------------------------------------------------------------------------
- * jQuery
- * ------------------------------------------------------------------------
- * add .rating to jQuery only if jQuery is present
- */
 
 onDOMContentLoaded(() => {
   const $ = getjQuery();
@@ -104,3 +90,4 @@ onDOMContentLoaded(() => {
 });
 
 export default Carousel;
+
