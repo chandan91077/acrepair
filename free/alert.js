@@ -3,11 +3,7 @@ import EventHandler from '../mdb/dom/event-handler';
 import SelectorEngine from '../mdb/dom/selector-engine';
 import BSAlert from '../bootstrap/mdb-prefix/alert';
 
-/**
- * ------------------------------------------------------------------------
- * Constants
- * ------------------------------------------------------------------------
- */
+
 
 const NAME = 'alert';
 const DATA_KEY = `mdb.${NAME}`;
@@ -59,11 +55,7 @@ class Alert extends BSAlert {
   }
 }
 
-/**
- * ------------------------------------------------------------------------
- * Data Api implementation - auto initialization
- * ------------------------------------------------------------------------
- */
+
 
 SelectorEngine.find(SELECTOR_ALERT).forEach((el) => {
   let instance = Alert.getInstance(el);
@@ -72,12 +64,7 @@ SelectorEngine.find(SELECTOR_ALERT).forEach((el) => {
   }
 });
 
-/**
- * ------------------------------------------------------------------------
- * jQuery
- * ------------------------------------------------------------------------
- * add .rating to jQuery only if jQuery is present
- */
+
 onDOMContentLoaded(() => {
   const $ = getjQuery();
 
@@ -93,3 +80,4 @@ onDOMContentLoaded(() => {
 });
 
 export default Alert;
+
