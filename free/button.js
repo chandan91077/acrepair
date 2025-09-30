@@ -213,11 +213,6 @@ class Button extends BSButton {
   }
 }
 
-/**
- * ------------------------------------------------------------------------
- * Data Api implementation - auto initialization
- * ------------------------------------------------------------------------
- */
 
 SelectorEngine.find(SELECTOR_FIXED_CONTAINER).forEach((element) => {
   let instance = Button.getInstance(element);
@@ -235,11 +230,7 @@ SelectorEngine.find(SELECTOR_BUTTON).forEach((element) => {
   return instance;
 });
 
-/**
- * ------------------------------------------------------------------------
- * jQuery
- * ------------------------------------------------------------------------
- */
+
 
 onDOMContentLoaded(() => {
   const $ = getjQuery();
@@ -256,3 +247,4 @@ onDOMContentLoaded(() => {
 });
 
 export default Button;
+
