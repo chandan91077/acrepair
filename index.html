@@ -15,177 +15,18 @@
   <link rel="stylesheet" href="css/mdb.min.css" />
   <!-- Custom styles -->
   <link rel="stylesheet" href="css/style.css" />
-  
-  <!-- Floating Button Styles -->
-  <style>
-    /* Header Info Styles - FIXED */
-    .header-info {
-      background-color: #fecd1a;
-      color: #000;
-      padding: 8px 0;
-      font-weight: bold;
-      font-size: 14px;
-      position: relative;
-      z-index: 2001; /* Higher than navbar */
-      width: 100%;
-    }
-    
-    .header-info .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    .header-info-item {
-      display: flex;
-      align-items: center;
-    }
-    
-    .header-info-item i {
-      margin-right: 8px;
-      font-size: 16px;
-    }
-    
-    .urgent-call {
-      color: #d32f2f;
-      font-weight: bold;
-    }
-    
-    .urgent-call a {
-      color: #d32f2f;
-      text-decoration: none;
-    }
-    
-    .urgent-call a:hover {
-      text-decoration: underline;
-    }
-    
-    @media (max-width: 768px) {
-      .header-info .container {
-        flex-direction: column;
-        text-align: center;
-      }
-      
-      .header-info-item {
-        margin-bottom: 5px;
-      }
-    }
-
-    /* Floating Buttons Styles */
-    .floating-buttons {
-      position: fixed;
-      z-index: 1000;
-    }
-    
-    /* Right side buttons */
-    .floating-call {
-      bottom: 120px;
-      right: 20px;
-    }
-    
-    /* Left side buttons */
-    .floating-whatsapp {
-      bottom: 120px;
-      left: 20px;
-    }
-    
-    .floating-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      text-decoration: none;
-      position: relative;
-      transition: all 0.3s ease;
-    }
-    
-    .call-btn {
-      background-color: #25D366;
-      color: white;
-    }
-    
-    .whatsapp-btn {
-      background-color: #128C7E;
-      color: white;
-    }
-    
-    .floating-btn i {
-      font-size: 24px;
-    }
-    
-    .floating-btn:hover {
-      transform: scale(1.1);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-    }
-    
-    .tooltip {
-      position: absolute;
-      background-color: #333;
-      color: white;
-      padding: 5px 10px;
-      border-radius: 4px;
-      font-size: 14px;
-      white-space: nowrap;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s, visibility 0.3s;
-    }
-    
-    /* Right side tooltip */
-    .floating-call .tooltip {
-      right: 70px;
-    }
-    
-    /* Left side tooltip */
-    .floating-whatsapp .tooltip {
-      left: 70px;
-    }
-    
-    .floating-btn:hover .tooltip {
-      opacity: 1;
-      visibility: visible;
-    }
-    
-    /* For mobile responsiveness */
-    @media (max-width: 768px) {
-      .floating-btn {
-        width: 50px;
-        height: 50px;
-      }
-      
-      .floating-btn i {
-        font-size: 20px;
-      }
-      
-      .floating-call {
-        bottom: 100px;
-        right: 15px;
-      }
-      
-      .floating-whatsapp {
-        bottom: 100px;
-        left: 15px;
-      }
-      
-      .floating-call .tooltip {
-        right: 60px;
-      }
-      
-      .floating-whatsapp .tooltip {
-        left: 60px;
-      }
-    }
-  </style>
-  
    <!-- LOCAL SEO – SURAT AC REPAIR #1 START -->
 <!-- Geo-meta -->
 <meta name="geo.region" content="IN-GJ">
 <meta name="geo.placename" content="Surat, Gujarat">
 <meta name="geo.position" content="21.1702;72.8311">
 <meta name="ICBM" content="21.1702,72.8311">
+ <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Krishna AC & Home Appliance Repair Service">
+  <meta name="twitter:description" content="Need AC repair in Surat? Krishna Service fixes AC, fridge, TV, washing-machine same-day. 30-min response, 90-day warranty.">
+  <meta name="twitter:image" content="https://www.krishnaservice.com/img/home1.jpeg">
+  <meta name="twitter:site" content="@krishnaservice">
 
 <!-- Title & meta description (exact match keywords) -->
 <title>AC Repair Surat | Same-Day Fridge, TV, Washing-Machine Repair – Krishna Service</title>
@@ -298,9 +139,7 @@
     }
   }, 1000); // Update every second
 </script>
-
-  <!-- Single Header Section - FIXED OVERLAPPING -->
-<div class="header-info">
+  <div class="header-info">
   <div class="container">
     <div class="header-info-item">
       <i class="far fa-clock"></i>
@@ -398,6 +237,74 @@
     margin-top: 40px; /* Space for the header info */
   }
 </style>
+  <!--Main Navigation-->
+  <header>
+    <style>
+      /* Carousel styling */
+      #introCarousel,
+      .carousel-inner,
+      .carousel-item,
+      .carousel-item.active {
+        height: 100vh;
+      }
+
+      .carousel-item:nth-child(1) {
+        background-image: url('img/home1.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      .carousel-item:nth-child(2) {
+        background-image: url('img/home2.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      .carousel-item:nth-child(3) {
+        background-image: url('img/home3.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      /* Height for devices larger than 576px */
+      @media (min-width: 992px) {
+        #introCarousel {
+          margin-top: -58.59px;
+        }
+      }
+
+      .navbar {
+        /* color: #030303 !important;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        border-radius: 1rem;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border: 6px solid #fecd1a;
+        margin-top: -1rem;
+        padding: 10px;
+        margin-left: -5px;
+        margin-right: -5px;
+        background-color: white; */
+        margin-top: -9px;
+        overflow: hidden;
+        border-bottom: 6px solid #fecd1a;
+        background-color: white;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        position: fixed; /* Set the navbar to fixed position */
+        top: 0; /* Position the navbar at the top of the page */
+        width: 100%; /* Full width */
+      }
+      .nav-link {
+        color: #030303 !important;
+      }
+    </style>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg" style="z-index: 2000;">
@@ -1117,8 +1024,7 @@
     <!-- Copyright -->
   </footer>
   <!--Footer-->
-  
-    <!-- Floating Call Button (Right Side) -->
+      <!-- Floating Call Button (Right Side) -->
   <div class="floating-buttons floating-call">
     <a href="tel:+917802013274" class="floating-btn call-btn">
       <i class="fas fa-phone"></i>
@@ -1242,12 +1148,54 @@
       }
     }
 </style>
-
   <!-- MDB -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
   <!-- Custom scripts -->
   <script type="text/javascript" src="js/script.js"></script>
+  <!--Start of Tawk.to Script-->
+
+<!-- Floating buttons : WhatsApp LEFT  |  Call RIGHT (both green) -->
+<style>
+  .float-btn{
+    position:fixed;
+    bottom:30px;
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    background:#25D366;          /* WhatsApp green */
+    box-shadow:0 4px 10px rgba(0,0,0,.25);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:999;
+    transition:transform .2s;
+  }
+  .float-btn:hover{ transform:scale(1.1) }
+
+  .wa-btn{ left:20px; }
+  .call-btn{ right:20px; }
+
+  .float-btn svg{ width:28px; height:28px; fill:#fff; }
+</style>
+
+
   
+  <script>
+  const callBar = document.querySelector('.call-bar');
+  
+  callBar.addEventListener('touchstart', () => {
+    callBar.style.width = 'auto';
+    callBar.style.borderRadius = '25px';
+  });
+  
+  callBar.addEventListener('touchend', () => {
+    // If you want to revert on touch end (optional)
+    callBar.style.width = '50px';
+    callBar.style.borderRadius = '50%';
+  });
+  </script>
+  
+
 <!-- Email Js Link -->
 <script
 type="text/javascript"
